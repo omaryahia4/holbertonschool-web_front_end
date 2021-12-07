@@ -15,16 +15,16 @@ a {
     color: var(--text-color);
 }
 
-*.visually-hidden {
+.visually-hidden {
     display: none;
 }
 
-*.card-category {
+.card-category {
     color: var(--color-primary);
 
 }
 
-*.section-tagline {
+.section-tagline {
     color: var(--color-primary);
 }
 

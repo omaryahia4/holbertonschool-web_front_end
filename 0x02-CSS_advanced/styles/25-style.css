@@ -53,11 +53,11 @@ a:active {
     background: var(--button-hover-background);
 }
 
-*.visually-hidden {
+.visually-hidden {
     display: none;
 }
 
-*.card-category {
+.card-category {
     color: var(--color-primary);
 
 }
@@ -92,7 +92,7 @@ a:active {
     color: var(--section-title-color);
 }
 
-*.section-tagline {
+.section-tagline {
     color: var(--color-primary);
     font-family: var(--font-family-title);
     text-transform: var(--section-tagline-transform);
