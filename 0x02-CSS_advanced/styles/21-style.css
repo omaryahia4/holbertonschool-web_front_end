@@ -152,13 +152,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: var(--nav-item-margin);
 }
 
-nav .nav-link {
+.nav .nav-link {
     display: block;
     padding: 0.5rem 1rem 0.5rem 1rem;
 
 }
 
-nav .nav-link:hover {
+.nav .nav-link:hover {
     color: var(--nav-item-link-hover);
     
 }
