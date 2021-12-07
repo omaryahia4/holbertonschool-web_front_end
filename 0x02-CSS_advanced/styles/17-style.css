@@ -84,7 +84,8 @@ a:active {
 }
 .container {
     width: 960px;
-    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
 :root {
     --color-primary: #d73953;
