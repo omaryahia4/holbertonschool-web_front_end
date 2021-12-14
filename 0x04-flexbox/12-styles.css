@@ -558,11 +558,11 @@
         display: flex;
     }
 
-    .post .post-content {
+    .post-content {
         width: 100%;
     }
 
-    .post .post-aside {
+    .post-aside {
         order: -1;
         min-width: 20%;
     }
