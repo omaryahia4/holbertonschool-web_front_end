@@ -1,4 +1,4 @@
-# avaScript advanced :
+# JavaScript advanced :
 ## Learning Objectives :
 -   What is lexical scoping in JavaScript
 -   What is closure in JavaScript
