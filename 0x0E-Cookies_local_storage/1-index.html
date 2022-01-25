@@ -10,10 +10,11 @@
         function setCookies(username, email) {
             username = Cookies.set('name', document.form1.firstname.value, { expires: 10 });
             email = Cookies.set('email', document.form1.email.value, { expires: 10 });
+            
         }
         function showCookies() {
             let c = document.createElement('p');
-            c.innerText = "Cookies: " + 'name: ' + Cookies.get('name')+ ', ' + 'email: ' + Cookies.get('email');
+            c.innerText = "Cookies: " + setCookies(username, email);
             document.body.appendChild(c);
         }
     </script>
