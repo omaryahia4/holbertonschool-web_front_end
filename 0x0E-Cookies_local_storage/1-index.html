@@ -8,8 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/index.min.js"></script>
     <script>
         function setCookies(username, email) {
-            username = Cookies.set('name', document.form1.firstname.value, { expires: 10 });
-            email = Cookies.set('email', document.form1.email.value, { expires: 10 });
+            username = Cookies.set('name', document.form1.firstname.value, { expires: 10, path: '' });
+            email = Cookies.set('email', document.form1.email.value, { expires: 10, path: '' });
         }
         function showCookies() {
             let c = document.createElement('p');
