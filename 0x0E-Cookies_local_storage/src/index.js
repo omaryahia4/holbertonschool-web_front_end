@@ -1,12 +1,10 @@
 function setCookies() {
-    username = document.form1.firstname.value;
-    document.cookie = "username= " + username;
-    email = document.form1.email.value;
-    document.cookie = "email= " + email;
+    username = Cookies.set('name', document.form1.firstname.value);
+    email = Cookies.set('email', document.form1.email.value);
 
 }
 function showCookies() {
     let c = document.createElement('p');
-    c.innerText = "Cookies: " +  document.cookie;
-    document.body.append(c);
+    c.innerText = "Cookies: " + 'name: ' + Cookies.get('name')+ ', ' + 'email: ' + Cookies.get('email');
+    document.body.appendChild(c);
 }
