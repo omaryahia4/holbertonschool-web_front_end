@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 4</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script>
+            function createFamilyTree() {
+                $("body").append("<table></table>");
+          $("table").append("<tr> <th style=\"font-weight: bold; font-size: 2rem;\">Firstname</th> <th style=\"font-weight: bold; font-size: 2rem;\">Lastname</th> </tr>");
+          $("table").append("<tbody></tbody>");
+          $("tbody").append($('<tr></tr>').append($('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Guillaume'), $('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Salva')));
+          $("tbody").append($('<tr></tr>').append($('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Paulette'), $('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Salva')));
+          $("tbody").append($('<tr></tr>').append($('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Antoine'), $('<td style=\"font-weight: 500; font-size: 2rem;\"></td>').text('Salva')));
+            }
+            function replaceFamilyTree() {
+                $( "tbody" )
+                    .html( "<tr> <td style=\"font-weight: 500; font-size: 2rem;\">Gerard</td> <td style=\"font-weight: 500; font-size: 2rem;\">Bonissa</td>" );
+            }
+            $( document ).ready(function() {
+                createFamilyTree();
+                replaceFamilyTree();
+            });
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
