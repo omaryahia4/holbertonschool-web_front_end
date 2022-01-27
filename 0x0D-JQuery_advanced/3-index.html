@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 3</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script>
+            function createFamilyTree() {
+                var table0 = $("<table>");
+                var tr0 = $("<tr>");
+                var th0 = $("<th style=\"font-weight: bold; font-size: 2rem;\"></th>").text('Firstname');
+                var th1 = $("<th style=\"font-weight: bold; font-size: 2rem;\"></th>").text('Lastname');
+                var tr1 = $("</tr>");
+                var tr2 = $("<tr>");
+                var td0 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Guillaume');
+                var td1 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Salva');
+                var tr3 = $("</tr>");
+                var tr4 = $("<tr>");
+                var td2 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Paulette');
+                var td3 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Salva');
+                var tr5 = $("</tr>");
+                var tr6 = $("<tr>");
+                var td4 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Antoine');
+                var td5 = $("<td style=\"font-weight: 500; font-size: 2rem;\"></td>").text('Salva');
+                var tr7 = $("</tr>");
+                var table1 = $("</table>");
+                $("body").append(table0, tr0, th0, th1, tr1, tr2, td0, td1, tr3, tr4, td2, td3, tr5, tr6, td4, td5, tr7, table1);
+            }
+            $( document ).ready(function() {
+                createFamilyTree();
+            });
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+</html>
