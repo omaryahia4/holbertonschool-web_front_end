@@ -21,7 +21,7 @@
                     ]);
             }
             function addNewMember(firstName, lastName, position) {
-                if (position == 'Before') {
+                if (position === 'before') {
                     $('tbody').prepend([
                         $('<tr style=\'font-size: 2rem\'/>').append([
                             $('<td/>', { text: firstName }),
@@ -59,7 +59,7 @@
             }
             function createForm() {
                 $('body').prepend([
-                    $('<form/>').append([
+                    
                     $('<input />', {type: 'text'}),
                     $('<input />', {type: 'text'}),
                     $('<select/>').append([
@@ -68,10 +68,10 @@
                     ]),
                     $('<input/>', {type: 'submit', on: {
                         click: function () {
-                            addNewMember($('input:text').val(), $('input:text').val(), $("option:selected").val());
+                            addNewMember($('input:nth-child(1)').val(), $('input:nth-child(2)').val(), $("option:selected").val());
                         }
                     }}
-                    )])
+                    )
                     
                 ])
             };
