@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltf">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in to website</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="./src/index.js"></script>
+</head>
+<body>
+    <h1>Login to the website</h1>
+    <form name="form1">
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname" value=>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <button type="submit" onclick="setCookies()">Log me in</button>
+    </form>
+    <h1>Cookies</h1>
+    <button type="submit" onclick="showCookies()">Show the cookies</button>
+</body>
+</html>

@@ -1,0 +1,15 @@
+/*extended*/
+%f {
+    font-size: 12px;
+}
+.info {
+    @extend %f;
+}
+.success {
+    @extend %f;
+    color: #00FF00; 
+}
+.warning {
+    @extend %f;
+    color: #FF0000; 
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltf">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in to website</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/combine/npm/js-cookie@3.0.1,npm/js-cookie@3.0.1/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/index.min.js"></script>
+    <script>
+        function setCookies(username, email) {
+            username = Cookies.set('name', document.form1.firstname.value, { expires: 10, path: '' });
+            email = Cookies.set('email', document.form1.email.value, { expires: 10, path: '' });
+        }
+        function showCookies() {
+            let c = document.createElement('p');
+            c.innerText = "Cookies: " + 'name: ' + Cookies.get('name')+ ', ' + 'email: ' + Cookies.get('email');
+            document.body.appendChild(c);
+        }
+    </script>
+</head>
+<body>
+    <h1>Login to the website</h1>
+    <form name="form1">
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname" value=>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <button type="submit" onclick="setCookies()">Log me in</button>
+    </form>
+    <h1>Cookies</h1>
+    <button type="submit" onclick="showCookies()">Show the cookies</button>
+</body>
+</html>
