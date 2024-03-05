@@ -1,3 +1,33 @@
-/*Sass sorting*/
-@import "103-sort_list.scss";
-@debug sort($list_to_sort);
+/* All my colors */
+
+@import '103-sort_list';
+$alpha: abcdefghijklmnopqrstuvwxyz;
+@function compare($str1, $str2) {
+	$str1: to-lower-case($str1);
+	$str2: to-lower-case($str2);
+	$len: min(str-length($str1), str-length($str2));
+	@for $i from 1 through $len {
+		$c1: str-index($alpha, str-slice($str1, $i, $i));
+		$c2: str-index($alpha, str-slice($str2, $i, $i));
+		@if $c1 != $c2 {
+			@return $c1 < $c2;
+		}
+	}
+	@return str-length($str1) < str-length($str2);
+}
+
+$j: length($list_to_sort);
+@while $j > 0 {
+	@for $i from 1 through $j {
+		@if $i + 1 <= length($list_to_sort)  {
+			$str1: nth($list_to_sort, $i);
+			$str2: nth($list_to_sort, $i + 1);
+			@if not compare($str1, $str2) {
+				$list_to_sort: set-nth($list_to_sort, $i, $str2);
+				$list_to_sort: set-nth($list_to_sort, $i + 1, $str1);
+			}
+		}	
+	}
+	$j: $j - 1;
+}
+@debug $list_to_sort;
