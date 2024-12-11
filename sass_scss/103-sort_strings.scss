@@ -1,0 +1,46 @@
+@use '103-sort_list' as List; // Import the file with a namespace
+@use 'sass:list';
+@use "sass:string";
+$sort-order: a b c d e f g h i j k l m n o p q r s t u v w x y z !default;
+
+@function compare($string1, $string2, $sort-order) {
+  $string1: string.to-lower-case($string1);
+  $string2: string.to-lower-case($string2);
+
+  @for $i from 1 through min(string.length($string1), string.length($string2)) {
+    $char1: string.slice($string1, $i, $i);
+    $char2: string.slice($string2, $i, $i);
+
+    @if $char1 and $char2 and list.index($sort-order, $char1) != list.index($sort-order, $char2) {
+      @return list.index($sort-order, $char1) < list.index($sort-order, $char2);
+    }
+  }
+
+  @return string.length($string1) < string.length($string2);
+}
+
+@function swap($list, $index1, $index2) {
+  @if abs($index1) > list.length($list) or abs($index2) > list.length($list) {
+    @return $list;
+  }
+
+  $temp: list.nth($list, $index1);
+  $list: list.set-nth($list, $index1, list.nth($list, $index2));
+  $list: list.set-nth($list, $index2, $temp);
+  @return $list;
+}
+
+@function sort($list, $sort-order) {
+  @for $i from 1 through list.length($list) {
+    @for $j from $i * -1 through -1 {
+      $j: abs($j);
+      @if $j > 1 and compare(list.nth($list, $j), list.nth($list, $j - 1), $sort-order) {
+        $list: swap($list, $j, $j - 1);
+      }
+    }
+  }
+  @return $list;
+}
+
+// Debug the sorted result for the imported list
+@debug sort(List.$list_to_sort, $sort-order);
